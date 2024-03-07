@@ -1,0 +1,12 @@
+Welcome. This is a simple web app in Go! 
+
+You can view, create, and edit wiki pages!
+
+To view, go to /view/<pageName>
+To edit, go to /edit/<pageName>
+To create, simply go to view or edit on an non-existing page.
+
+[FrontPage]
+[test]
+[test2]
+[TestPage]
