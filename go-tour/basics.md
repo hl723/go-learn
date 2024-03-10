@@ -4,18 +4,21 @@ Go over a summary of the basics of Go.
 
 ## Packages 
 - Each program starts in `package main`
+
 - Your program can use other packages with `import "path/to/package"`
 - The package name is the same as the last element in the import path. `math/rand` uses files from that begin with `package rand`
 - Names are exported if it begins with a captial letter.
 
 ## Functions 
 -  `func name(param1 type1, ...) returnType`
+
 - If params share types, can omit from all, but the last. Like `func f(x, y, z int)`
 - Can return multiple values by having a tuple of return types `(int, string)`
 - Return values can be named. Those are treated like variables. A return statement without args will return the named return values implicitly. This is known as a "naked" return. Should only be used in short functions!
 
 ## Variables
 - Declare a variable with `var name type`
+
 - If initializer is present, can omit type, type will be inferred. `var a, b, c = 1,true, "hi"`
 - `:=` Can declare and init a variable only *inside* a function!
 - Uninitialized values are given 0 for numerics, false for boolean, "" for strings
@@ -25,6 +28,7 @@ Go over a summary of the basics of Go.
 
 ## Variable Types
 - bool 
+
 - string
 - int, uint, uintptr - defaults to 32-bits on 32 bit systems, 64 bit on 64-bit systems
 - int8, int16, int32, int64, and also uint versions
@@ -35,6 +39,7 @@ Go over a summary of the basics of Go.
 
 ## Loops and Conditionals
 - Only for loops, no while. C-for loop.
+
 - For a while loop, just write for. `for sum < 1000`
 - Infinite Loop `for {}`
 - if statements can run a short statement before the condition separated by semicolon. That variable is only within the scope of the if and else block. `if v := math.Pow(x, n); v < lim`
@@ -45,6 +50,7 @@ Go over a summary of the basics of Go.
 
 ## Pointers
 - Like C, there are * and & operations
+
 - There is no pointer arithmetic.
 
 ## Structs
@@ -73,6 +79,7 @@ primes := [6]int{2, 3, 5, 7, 11, 13}
 
 ## Slices
 - Dynamically sized arrays.
+
 - Type: `[]T`
 - Python Slices - `a[low:high]`
 - Slices does not store data. It is a reference to an underlying array. Other slices that share the same underlying array will see those changes.
@@ -116,10 +123,12 @@ delete(m, key)
 elem, ok = m[key]
 ```
 - If top-level type is specified, can be omitted when specifiying key/values
+
 - See [this example](./exercise-maps.go).
 
 ## Function Values
 - Functions can be arguments and return values.
+
 - See [this example](./function-values.go).
 - Closures is a function that references values outside of its body.
 - Functions can be closures. [Example](./function-closures.go) [Example2](./exercise-fibonacci-closure.go)
