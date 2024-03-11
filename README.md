@@ -15,6 +15,9 @@ My journey into the Go programming language.
 ## A Tour of Go
 [go-tour](./go-tour/) has my notes and exercises from the "A Tour of Go" tutorial.
 
+## Effective Go
+[Go conventions](./notes/go-conventions.md) contain best coding practices for programming in Go. 
+
 ## Cheatsheets
 Some cheatsheets I find useful when learning Go. 
 
